@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181824"/>
+      <stop offset="100%" stop-color="#0a0a0f"/>
+    </linearGradient>
+
+    <!-- Border Glow Gradient -->
+    <linearGradient id="border-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+
+    <!-- YouTube Screen Gradient -->
+    <linearGradient id="screen-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff1744"/>
+      <stop offset="50%" stop-color="#d946ef"/>
+      <stop offset="100%" stop-color="#6366f1"/>
+    </linearGradient>
+
+    <!-- Glow Filter -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Shadow Filter -->
+    <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Base Squircle -->
+  <rect x="24" y="24" width="464" height="464" rx="108" fill="url(#bg-grad)" stroke="url(#border-grad)" stroke-width="6"/>
+
+  <!-- Subtle Inner Ambient Glow -->
+  <circle cx="256" cy="256" r="140" fill="#8b5cf6" opacity="0.15" filter="url(#glow)"/>
+
+  <!-- Screen / Video Display Shape -->
+  <rect x="100" y="146" width="312" height="220" rx="54" fill="url(#screen-grad)" filter="url(#drop-shadow)"/>
+
+  <!-- Play Triangle -->
+  <polygon points="224,206 320,256 224,306" fill="#ffffff"/>
+
+  <!-- Sparkle Stars (Inspiration Motif) -->
+  <!-- Top Right Sparkle -->
+  <g transform="translate(370, 110)">
+    <path d="M0,-28 Q0,0 28,0 Q0,0 0,28 Q0,0 -28,0 Q0,0 0,-28 Z" fill="#fbbf24" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="4" fill="#fff"/>
+  </g>
+
+  <!-- Small Ambient Sparkle -->
+  <g transform="translate(130, 115) scale(0.6)">
+    <path d="M0,-24 Q0,0 24,0 Q0,0 0,24 Q0,0 -24,0 Q0,0 0,-24 Z" fill="#38bdf8"/>
+    <circle cx="0" cy="0" r="3" fill="#fff"/>
+  </g>
+
+  <!-- Bottom Accent Dot -->
+  <circle cx="395" cy="385" r="8" fill="#10b981"/>
+</svg>

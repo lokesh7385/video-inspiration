@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Video Inspiration
+GenericName=YouTube Curation & Recommendation Engine
+Comment=AI-driven video curation and recommendation dashboard
+Exec="/media/loki/New Volume6/code/reccomendation/run.sh"
+Path=/media/loki/New Volume6/code/reccomendation
+Icon=/home/loki/.local/share/icons/video-inspiration.svg
+Terminal=false
+Categories=AudioVideo;Video;
+Keywords=youtube;videos;curation;recommendation;tech;coding;trading;hustles;projects;
+StartupNotify=true
+StartupWMClass=VideoInspiration
